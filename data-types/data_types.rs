@@ -15,17 +15,17 @@ fn main(){
     let f : f64 = 56.0;
     println!("The float number is {f}");
 
-    let mut m : bool = false;
+    let m : bool = false;
     println!("The boolean value is {m}");
 
     /* character:  */
 
-    let mut c : char = 'j';
+    let c : char = 'j';
     println!("The characeter is {c}");
 
     /* type referencing...one does not have to specify the data type:  */
 
-    let mut x = "Name";
+    let x = "Name";
     // x = 3; // does not work
 
     println!("The infered variable is {x}");
@@ -72,7 +72,7 @@ fn main(){
 
     /* Rust slice: used to access memory portions of data types such as arrays, vectors, etc.. */
 
-    let mut slice = &mut_arr[2..4]; 
+    let slice = &mut_arr[2..4]; 
     
     println!("{:?}", slice);
     
@@ -92,5 +92,17 @@ fn main(){
 
     let string_slice = &my_string[0..my_string.len() - 2];
     println!("{:?}", string_slice);
+
+    /* suffixed literals: */
+    let number = 678i32;
+    println!("The number is {} and its size is {}", number, std::mem::size_of_val(&number)); // get the size in bytes
+
+
+    /* type aliasing:  */
+
+    type SmallNumber = u8;
+    let alias_number : SmallNumber = 78;
+    println!("The aliased number is -> {}", alias_number);
+
 
 }

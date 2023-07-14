@@ -11,9 +11,13 @@ fn main(){
         age: 20,
         height: 78
     };
+    let person_two = NameStruct{
+        name: String::from("Weda"),
+        ..person // instantiating using the struct update syntax to make structs have similar fields    
+    };
 
     println!("{}", person.name);
-
+    println!("{}", person_two.age);
     /*
     destructuring fields of a struct
     The name of the variable must be the name of the struct's fields
