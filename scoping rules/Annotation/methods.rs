@@ -1,3 +1,4 @@
+#[derive(Debug)]
 struct Owner(i32);
 
 impl Owner {
@@ -13,4 +14,5 @@ fn main() {
 
     owner.add_one();
     owner.print();
+    println!("{:?}",owner);
 }

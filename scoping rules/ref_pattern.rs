@@ -41,7 +41,7 @@ fn main() {
     
     {
         // Destructure `mutable_tuple` to change the value of `last`.
-        let (_, ref mut last) = mutable_tuple;
+        let (_,  ref mut last) = mutable_tuple;
         *last = 2u32;
     }
     
